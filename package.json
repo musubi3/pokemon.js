@@ -15,5 +15,8 @@
   "homepage": "https://github.com/musubi3/pokemon.js#readme",
   "dependencies": {
     "node-fetch": "^2.6.1"
-  }
+  },
+  "keywords": [
+    "pokemon", "javascript", "js"
+  ]
 }
