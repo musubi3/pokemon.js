@@ -2,7 +2,8 @@ const get = require('../../fetch/fetch');
 const { formatPokemon } = require('../../utils/utils');
 
 /** Returns an Array of the forms for the pokemon.
- * @param {String} pokemon */
+ * @param {String} pokemon 
+ * @returns {Array} */
 module.exports = async function getForms(pokemon) {
     let call = await formatPokemon(pokemon);
     let pokeData = await get(`pokemon/${call}`);

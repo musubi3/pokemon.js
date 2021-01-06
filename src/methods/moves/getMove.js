@@ -1,9 +1,11 @@
 const get = require('../../fetch/fetch');
 const { typeLogos } = require('../../utils/Constants');
 const { format, formatPokemon } = require('../../utils/utils');
+const { getLang } = require('../../utils/Variables');
 
 /** Returns an Array of the moves the pokemon learns or data on the move in JSON fromat.
- * @param {String} name */
+ * @param {String} name 
+ * @returns {Array | JSON} */
 module.exports = async function getMove(name) {
     let call = format(name);
     let moveData = await get(`move/${call}`);
@@ -20,12 +22,18 @@ module.exports = async function getMove(name) {
             moveData['effect_entries'] = effect.map(e => {
                 return {
                     effect: e.effect.replace('$effect_chance', moveData.effect_chance),
-                    language: e.language,
+                    language: e.language.name,
                     short_effect: e.short_effect.replace('$effect_chance', moveData.effect_chance)
                 }
             });
         }
         moveData['type'] = { name: moveData['type'].name, logo: typeLogos.get(moveData['type'].name) }
+        if (getLang().length) {
+            moveData['effect_entry'] = moveData['effect_entries'].filter(e => e.language === getLang())[0];
+            moveData['name'] = moveData['names'].filter(n => n.language === getLang())[0].name;
+            delete moveData['names'];
+            delete moveData['effect_entries'];
+        }
         delete moveData['effect_chance'];
         return moveData;
     } else {

@@ -2,7 +2,8 @@ const get = require('../../fetch/fetch');
 const { formatPokemon } = require('../../utils/utils');
 
 /** Returns an Object that contains the stats for the pokemon.
- * @param {String} pokemon */
+ * @param {String} pokemon 
+ * @returns {JSON} */
 module.exports = async function getStats(pokemon) {
     let call = await formatPokemon(pokemon);
     let pokeData = await get(`pokemon/${call}`);

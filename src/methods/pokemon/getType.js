@@ -3,7 +3,8 @@ const get = require('../../fetch/fetch');
 const { typeLogos } = require('../../utils/Constants');
 
 /** Returns an Array of the pokemon's types or returns data for the type in JSON format.
- * @param {String} name */
+ * @param {String} name 
+ * @returns {Array | JSON} */
 module.exports = async function getType(name) {
     let call = await formatPokemon(name);
     let pokeData = await get(`pokemon/${call}`);

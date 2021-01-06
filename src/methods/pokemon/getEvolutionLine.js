@@ -3,7 +3,8 @@ const fetch = require('node-fetch');
 const { formatPokemon } = require('../../utils/utils');
 
 /** Returns an Array of the evolution line of the pokemon.
- * @param {String} pokemon */
+ * @param {String} pokemon 
+ * @returns {Array} */
 module.exports = async function getEvolutionLine(pokemon) {
     let call = await formatPokemon(pokemon);
     let pokeData = await get(`pokemon/${call}`);

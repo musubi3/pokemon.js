@@ -39,7 +39,9 @@ Ignore any warnings about unmet peer dependencies, as they're all optional.
 ```js
 const Pokemon = require('pokemon.js');
 
-Pokemon.getPokemon('pikachu').then(pokeData => console.log(pokeData));
+Pokemon.setLanguage('english');
+
+Pokemon.getPokemon('pikachu').then(console.log);
 ```
 ### Methods
 
@@ -57,12 +59,14 @@ Returns an Object that contains the stats for the pokemon
 Returns an Array of the forms for the pokemon
 - **`getEvolutionLine(pokemon)`**:  
 Returns an Array of the evolution line of the pokemon
-- **`canLearn(pokemon)`**:
+- **`canLearn(pokemon)`**:  
 Determines whether the pokemon can learn a move, retruning true or false
 - **`getMove(pokemon | move)`**:  
-Returns an Array of the moves the pokemon learns or data on the move in JSON fromat
+Returns an Array of the moves the pokemon learns or data on the move in JSON format
 - **`getItem(item)`**:  
 Returns data on the item in JSON format
+- **`setLanguage(language)`**:  
+Sets the language you prefer if available. 
 
 ## Links
 
