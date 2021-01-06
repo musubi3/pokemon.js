@@ -66,7 +66,7 @@ Returns an Array of the moves the pokemon learns or data on the move in JSON for
 - **`getItem(item)`**:  
 Returns data on the item in JSON format
 - **`setLanguage(language)`**:  
-Sets the language you prefer if available. 
+Sets the language to the language you prefer if available. 
 
 ## Links
 
