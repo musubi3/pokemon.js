@@ -1,11 +1,8 @@
 {
   "name": "pokemon.js",
   "version": "1.0.0",
-  "description": "",
+  "description": "A JavaScript library that makes interacting with PokeAPI easier",
   "main": "./src/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/musubi3/pokemon.js.git"
