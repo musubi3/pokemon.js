@@ -1,6 +1,6 @@
 {
   "name": "pokemon.js",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A JavaScript library that makes interacting with PokeAPI easier",
   "main": "./src/index.js",
   "repository": {
@@ -17,6 +17,8 @@
     "node-fetch": "^2.6.1"
   },
   "keywords": [
-    "pokemon", "javascript", "js"
+    "pokemon",
+    "javascript",
+    "js"
   ]
 }

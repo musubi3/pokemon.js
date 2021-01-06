@@ -2,13 +2,15 @@ const get = require('../../fetch/fetch');
 const { typeLogos } = require('../../utils/Constants');
 const { formatPokemon } = require('../../utils/utils');
 
-/** @param {String} pokemon */
+/** Returns data for the pokemon in JSON format
+ * @param {String} pokemon */
 module.exports = async function getPokemon(pokemon) {
     let call = await formatPokemon(pokemon);
     let pokeData = await get(`pokemon/${call}`);
     if (pokeData !== undefined) {
         delete pokeData['location_area_encounters'];
         delete pokeData['order'];
+        delete pokeData['forms']
         pokeData['moves'] = pokeData['moves'].map(mv => mv.move.name);
         pokeData['abilities'] = pokeData['abilities'].map(abl => {
             return {

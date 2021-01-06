@@ -1,7 +1,8 @@
 const get = require('../../fetch/fetch');
 const { format, formatPokemon } = require('../../utils/utils');
 
-/** @param {String} name */
+/** Returns an Array of the pokemon's abilities or returns data for the ability in JSON format
+ * @param {String} name */
 module.exports = async function getAbility(name) {
     let call = await formatPokemon(name);
     let pokeData = await get(`pokemon/${call}`);

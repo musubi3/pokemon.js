@@ -25,7 +25,7 @@
 
 ## About
 
-pokemon.js is a [Node.js](https://nodejs.org) module that makes interacting with PokeAPI easier.
+pokemon.js is a [Node.js](https://nodejs.org) module that makes interacting with [PokeAPI](https://pokeapi.co/) easier.
 
 ## Installation
 
@@ -53,6 +53,10 @@ Returns an Array of the pokemon's abilities or returns data for the ability in J
 Returns an Object that contains the sprites for the pokemon
 - **`getStats(pokemon)`**:  
 Returns an Object that contains the stats for the pokemon
+- **`getForms(pokemon)`**:  
+Returns an Array of the forms for the pokemon
+- **`getEvolutionLine(pokemon)`**:  
+Returns an Array of the evolution line of the pokemon
 - **`getMove(pokemon | move)`**:  
 Returns an Array of the moves the pokemon learns or data on the move in JSON fromat
 - **`getItem(item)`**:  
