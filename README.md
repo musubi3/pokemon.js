@@ -57,6 +57,8 @@ Returns an Object that contains the stats for the pokemon
 Returns an Array of the forms for the pokemon
 - **`getEvolutionLine(pokemon)`**:  
 Returns an Array of the evolution line of the pokemon
+- **`canLearn(pokemon)`**:
+Determines whether the pokemon can learn a move, retruning true or false
 - **`getMove(pokemon | move)`**:  
 Returns an Array of the moves the pokemon learns or data on the move in JSON fromat
 - **`getItem(item)`**:  

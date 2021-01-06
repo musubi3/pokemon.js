@@ -1,7 +1,7 @@
 const get = require('../../fetch/fetch');
 const { format } = require('../../utils/utils');
 
-/** Returns data on the item in JSON format
+/** Returns data on the item in JSON format.
  * @param {String} item */
 module.exports = async function getMove(item) {
     let call = format(item);

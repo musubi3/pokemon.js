@@ -2,7 +2,7 @@ const get = require('../../fetch/fetch');
 const { typeLogos } = require('../../utils/Constants');
 const { format, formatPokemon } = require('../../utils/utils');
 
-/** Returns an Array of the moves the pokemon learns or data on the move in JSON fromat
+/** Returns an Array of the moves the pokemon learns or data on the move in JSON fromat.
  * @param {String} name */
 module.exports = async function getMove(name) {
     let call = format(name);
