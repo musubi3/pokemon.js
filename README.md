@@ -39,7 +39,7 @@ Ignore any warnings about unmet peer dependencies, as they're all optional.
 ```js
 const Pokemon = require('pokemon.js');
 
-console.log(await Pokemon.getPokemon('pikachu'));
+Pokemon.getPokemon('pikachu').then(pokeData => console.log(pokeData));
 ```
 ### Methods
 
