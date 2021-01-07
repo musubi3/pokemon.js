@@ -1,7 +1,7 @@
 const get = require('../../fetch/fetch');
 
 /** Returns an Array containing all of their names.
- * @param {'item'|'pokemon'|'ability'|'type'|'move'|'nature'} type
+ * @param {'item'|'pokemon'|'ability'|'type'|'move'|'nature'|'region'} type
  * @returns {Promise<Array>} */
 module.exports = async function getAll(type = 'pokemon') {
     let count = (await get(`${type}?offset=0&limit=1`)).count;

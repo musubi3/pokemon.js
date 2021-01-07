@@ -25,7 +25,7 @@
 
 ## About
 
-pokemon.js is a [Node.js](https://nodejs.org) module that makes interacting with [PokeAPI](https://pokeapi.co/) easier.
+pokemon.js is a [Node.js](https://nodejs.org) module that makes interacting with [PokéAPI](https://pokeapi.co/) easier.
 
 ## Installation
 
@@ -46,33 +46,33 @@ Pokemon.getPokemon('pikachu').then(console.log);
 ### Methods
 
 - **`getPokemon(pokemon)`**:  
-Returns data for the pokemon in JSON format
+Returns data for the pokémon in JSON format.
 - **`getType(pokemon | type)`**:  
-Returns an Array of the pokemon's types or returns data for the type in JSON format
+Returns an Array that contains the pokémon's type(s) or returns data for the type in JSON format.
 - **`getAbility(pokemon | ability)`**:  
-Returns an Array of the pokemon's abilities or returns data for the ability in JSON format
+Returns an Array that contains the pokémon's abilities or returns data for the ability in JSON format.
 - **`getSprites(pokemon)`**:  
-Returns an Object that contains the sprites for the pokemon
+Returns an Object that contains the sprites for the pokémon.
 - **`getStats(pokemon)`**:  
-Returns an Object that contains the stats for the pokemon
+Returns an Object that contains the stats for the pokémon.
 - **`getForms(pokemon)`**:  
-Returns an Array of the forms for the pokemon
+Returns an Array that contains the forms for the pokémon.
 - **`getEvolutionLine(pokemon)`**:  
-Returns an Array of the evolution line of the pokemon
+Returns an Array that contains the evolution line of the pokémon.
 - **`canLearn(pokemon)`**:  
-Determines whether the pokemon can learn a move, retruning true or false
+Determines whether the pokémon can learn a move, retruning true or false.
 - **`getMove(pokemon | move)`**:  
-Returns an Array of the moves the pokemon learns or data on the move in JSON format
+Returns an Array that contains the moves the pokémon learns or data on the move in JSON format.
 - **`getNature(nature)`**:  
-Returns an Object that contains the increased and decreased stat caused by the nature
+Returns an Object that contains the increased and decreased stat caused by the nature.
 - **`getItem(item)`**:  
-Returns data on the item in JSON format
+Returns data on the item in JSON format.
 - **`getRegion(region)`**:  
-Returns data on the region in JSON format
+Returns data on the region in JSON format.
 - **`getGeneration(generation)`**:  
-Returns data on the generation in JSON format
+Returns data on the generation in JSON format.
 - **`getAll(type)`**:  
-Returns an Array containing the names of all the specified type
+Returns an Array that contains the names of all the specified type.
 - **`setLanguage(language)`**:  
 Sets the language to the language you prefer if available. 
 
