@@ -1,10 +1,11 @@
 const get = require('../../fetch/fetch');
 const { getLang } = require('../../utils/Variables');
 /** Returns data on the generation in JSON format.
- * @param {Number} generation
+ * @param {'1'|'2'|'3'|'4'|'5'|'6'|'7'|'8'} generation
  * @returns {Promise<JSON>} */
 module.exports = async function getGeneration(generation) {
     if (!isNaN(generation)) {
+        generation = parseInt(generation);
         let genData = await get(`generation/${generation}`);
         if (genData !== undefined) {
             genData.names = genData.names.map(n => { return { language: n.language.name, name: n.name } });
@@ -17,7 +18,9 @@ module.exports = async function getGeneration(generation) {
             delete genData.id
             delete genData.version_groups;
             if (getLang().length) {
-                genData.name = genData.names.filter(n => n.language === getLang())[0].name;
+                genData.name = genData.names.filter(n => n.language === getLang())[0];
+                if (genData.name !== undefined) genData.name = genData.name.name
+                else genData.name = '';
                 delete genData.names;
             }
             return genData;

@@ -1,7 +1,7 @@
 const get = require('../../fetch/fetch');
 const { getLang } = require('../../utils/Variables');
 /** Returns data on the region in JSON format.
- * @param {String} region 
+ * @param {'kanto'|'johto'|'hoenn'|'sinnoh'|'unova'|'kalos'|'alola'|'galar'} region 
  * @returns {Promise<JSON>} */
 module.exports = async function getRegion(region) {
     if (isNaN(region)) {
@@ -15,7 +15,9 @@ module.exports = async function getRegion(region) {
             delete regionData.version_groups;
             delete regionData.id;
             if (getLang().length) {
-                regionData.name = regionData.names.filter(n => n.language === getLang())[0].name;
+                regionData.name = regionData.names.filter(n => n.language === getLang())[0];
+                if (regionData.name !== undefined) regionData.name = regionData.name.name
+                else regionData.name = '';
                 delete regionData.names;
             }
             return regionData;

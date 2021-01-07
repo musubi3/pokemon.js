@@ -17,6 +17,8 @@ module.exports = async function getNature(nature) {
             if (data.increased_stat === null) data.increased_stat = 'n/a';
             if (getLang().length) {
                 data.name = data.names.filter(n => n.language === getLang())[0].name;
+                if (data.name !== undefined) data.name = data.name.name
+                else data.name = '';
                 delete data.names;
             }
             return data;

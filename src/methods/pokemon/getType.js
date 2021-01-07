@@ -1,6 +1,7 @@
 const { formatPokemon, format } = require('../../utils/utils');
 const get = require('../../fetch/fetch');
 const { typeLogos } = require('../../utils/Constants');
+const { getLang } = require('../../utils/Variables');
 
 /** Returns an Array of the pokemon's types or returns data for the type in JSON format.
  * @param {String | Number} name 
@@ -30,6 +31,12 @@ module.exports = async function getType(name) {
                 no_damage_to: typeData['damage_relations'].no_damage_to.map(tp => tp.name)
             }
             typeData['logo'] = typeLogos.get(typeData['name']);
+            if (getLang().length) {
+                typeData['name'] = typeData['names'].filter(n => n.language === getLang())[0];
+                if (typeData.name !== undefined) typeData.name = typeData.name.name
+                else typeData.name = '';
+                delete typeData['names'];
+            }
             return typeData;
         }
     }

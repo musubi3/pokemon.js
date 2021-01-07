@@ -18,10 +18,16 @@
   },
   "keywords": [
     "pokemon",
-    "pokemonjs",
+    "pokeapi",
     "javascript",
-    "nodejs",
     "js",
     "api"
-  ]
+  ],
+  "scripts": {
+    "test": "node ./test/tester",
+    "dev": "nodemon ./test/tester"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }

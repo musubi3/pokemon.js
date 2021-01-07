@@ -15,8 +15,12 @@ module.exports = async function getPokemon(pokemon) {
         pokeData['names'] = speciesData['names'].map(n => { return { language: n.language.name, name: n.name } })
         pokeData['genera'] = speciesData['genera'].map(n => { return { language: n.language.name, genus: n.genus } })
         if (getLang().length) {
-            pokeData['name'] = pokeData['names'].filter(n => n.language === getLang())[0].name;
-            pokeData['genera'] = pokeData['genera'].filter(n => n.language === getLang())[0].genus;
+            pokeData['name'] = pokeData['names'].filter(n => n.language === getLang())[0];
+            pokeData['genera'] = pokeData['genera'].filter(n => n.language === getLang())[0];
+            if (pokeData.name !== undefined) pokeData.name = pokeData.name.name
+            else pokeData.name = '';
+            if (pokeData.genera !== undefined) pokeData.genera = pokeData.genera.genus
+            else pokeData.genera = '';
             delete pokeData['names'];
         }
         pokeData['pokedex_numbers'] = speciesData['pokedex_numbers'].map(n => { return { entry_number: n.entry_number, name: n.pokedex.name } });

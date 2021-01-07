@@ -34,7 +34,10 @@ module.exports = async function getAbility(name) {
             abilityData['names'] = abilityData['names'].map(n => { return { language: n.language.name, name: n.name } });
             if (getLang().length) {
                 abilityData['effect_entry'] = abilityData['effect_entries'].filter(e => e.language === getLang())[0];
-                abilityData['name'] = abilityData['names'].filter(n => n.language === getLang())[0].name;
+                abilityData['name'] = abilityData['names'].filter(n => n.language === getLang())[0];
+                if (abilityData['effect_entry'] === undefined) abilityData['effect_entry'] = [{ effect: '', language: getLang(), short_effect: '' }];
+                if (abilityData.name !== undefined) abilityData.name = abilityData.name.name
+                else abilityData.name = ''; 
                 delete abilityData['names'];
                 delete abilityData['effect_entries'];
             }

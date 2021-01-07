@@ -31,7 +31,10 @@ module.exports = async function getMove(name) {
             moveData['type'] = { name: moveData['type'].name, logo: typeLogos.get(moveData['type'].name) }
             if (getLang().length) {
                 moveData['effect_entry'] = moveData['effect_entries'].filter(e => e.language === getLang())[0];
-                moveData['name'] = moveData['names'].filter(n => n.language === getLang())[0].name;
+                moveData['name'] = moveData['names'].filter(n => n.language === getLang())[0];
+                if (moveData['effect_entry'] === undefined) moveData['effect_entry'] = [{ effect: '', language: getLang(), short_effect: '' }];
+                if (moveData.name !== undefined) moveData.name = moveData.name.name
+                else moveData.name = '';
                 delete moveData['names'];
                 delete moveData['effect_entries'];
             }

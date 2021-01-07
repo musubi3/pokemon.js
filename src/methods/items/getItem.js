@@ -21,7 +21,10 @@ module.exports = async function getMove(item) {
             });
             if (getLang().length) {
                 itemData['effect_entry'] = itemData['effect_entries'].filter(e => e.language === getLang())[0];
-                itemData['name'] = itemData['names'].filter(n => n.language === getLang())[0].name;
+                itemData['name'] = itemData['names'].filter(n => n.language === getLang())[0];
+                if (itemData['effect_entry'] === undefined) itemData['effect_entry'] = [{ effect: '', language: getLang(), short_effect: '' }];
+                if (itemData.name !== undefined) itemData.name = itemData.name.name
+                else itemData.name = '';
                 delete itemData['names'];
                 delete itemData['effect_entries'];
             }
