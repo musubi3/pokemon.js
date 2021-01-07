@@ -1,6 +1,6 @@
 {
   "name": "pokemon.js",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A JavaScript library that makes interacting with PokeAPI easier",
   "main": "./src/index.js",
   "repository": {
@@ -27,7 +27,5 @@
     "test": "node ./test/tester",
     "dev": "nodemon ./test/tester"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.7"
-  }
+  "devDependencies": {}
 }
