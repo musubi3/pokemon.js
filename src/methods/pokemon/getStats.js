@@ -2,10 +2,11 @@ const get = require('../../fetch/fetch');
 const { formatPokemon } = require('../../utils/utils');
 
 /** Returns an Object that contains the stats for the pokemon.
- * @param {String} pokemon 
- * @returns {JSON} */
+ * @param {String | Numbe} pokemon
+ * @returns {Promise<JSON>} */
 module.exports = async function getStats(pokemon) {
-    let call = await formatPokemon(pokemon);
+    if (isNaN(pokemon)) var call = await formatPokemon(pokemon);
+    else var call = pokemon;
     let pokeData = await get(`pokemon/${call}`);
     if (pokeData !== undefined) {
         let stats = {};

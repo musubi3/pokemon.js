@@ -3,16 +3,17 @@ const get = require('../../fetch/fetch');
 const { typeLogos } = require('../../utils/Constants');
 
 /** Returns an Array of the pokemon's types or returns data for the type in JSON format.
- * @param {String} name 
- * @returns {Array | JSON} */
+ * @param {String | Number} name 
+ * @returns {Promise<Array> | Promise<JSON>} */
 module.exports = async function getType(name) {
-    let call = await formatPokemon(name);
+    if (isNaN(name)) var call = await formatPokemon(name);
+    else var call = name;
     let pokeData = await get(`pokemon/${call}`);
     if (pokeData !== undefined) {
         let type = [];
         pokeData.types.forEach(tp => type.push({ name: tp.type.name, logo: typeLogos.get(tp.type.name) }));
         return type;
-    } else {
+    } else if (isNaN(name)) {
         call = format(name);
         let typeData = await get(`type/${call}`);
         if (typeData !== undefined) {
@@ -31,6 +32,6 @@ module.exports = async function getType(name) {
             typeData['logo'] = typeLogos.get(typeData['name']);
             return typeData;
         }
-        return undefined;
     }
+    return undefined;
 }

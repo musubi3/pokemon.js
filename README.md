@@ -1,4 +1,4 @@
-<div align="center">
+<div align="left">
   <br />
   <p>
     <a href="https://www.npmjs.com/package/pokemon.js"><img src="https://i.postimg.cc/Sx7sKrmx/pokemon.png" width="546" alt="pokemon.js" /></a>
@@ -63,8 +63,16 @@ Returns an Array of the evolution line of the pokemon
 Determines whether the pokemon can learn a move, retruning true or false
 - **`getMove(pokemon | move)`**:  
 Returns an Array of the moves the pokemon learns or data on the move in JSON format
+- **`getNature(nature)`**:  
+Returns an Object that contains the increased and decreased stat caused by the nature
 - **`getItem(item)`**:  
 Returns data on the item in JSON format
+- **`getRegion(region)`**:  
+Returns data on the region in JSON format
+- **`getGeneration(generation)`**:  
+Returns data on the generation in JSON format
+- **`getAll(type)`**:  
+Returns an Array containing the names of all the specified type
 - **`setLanguage(language)`**:  
 Sets the language to the language you prefer if available. 
 

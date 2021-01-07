@@ -9,5 +9,9 @@ module.exports = {
     canLearn: require('./methods/pokemon/canLearn'),
     getMove: require('./methods/moves/getMove'),
     getItem: require('./methods/items/getItem'),
-    setLanguage: require('./methods/misc/setLanguage')
+    setLanguage: require('./methods/misc/setLanguage'),
+    getAll: require('./methods/misc/getAll'),
+    getNature: require('./methods/natures/getNature'),
+    getGeneration: require('./methods/misc/getGeneration'),
+    getRegion: require('./methods/misc/getRegion')
 }

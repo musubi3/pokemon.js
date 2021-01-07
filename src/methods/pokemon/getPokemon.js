@@ -4,10 +4,11 @@ const { formatPokemon } = require('../../utils/utils');
 const { getLang } = require('../../utils/Variables');
 
 /** Returns data for the pokemon in JSON format.
- * @param {String} pokemon 
- * @returns {JSON} */
+ * @param {String | Number} pokemon 
+ * @returns {Promise<JSON>} */
 module.exports = async function getPokemon(pokemon) {
-    let call = await formatPokemon(pokemon);
+    if (isNaN(pokemon)) var call = await formatPokemon(pokemon);
+    else var call = pokemon;
     let pokeData = await get(`pokemon/${call}`);
     if (pokeData !== undefined) {
         let speciesData = await get(`pokemon-species/${call}`);

@@ -3,10 +3,11 @@ const { format, formatPokemon } = require('../../utils/utils');
 const { getLang } = require('../../utils/Variables');
 
 /** Returns an Array of the pokemon's abilities or returns data for the ability in JSON format.
- * @param {String} name 
- * @returns {Array | JSON} */
+ * @param {String | Number} name
+ * @returns {Promise<Array> | Promise<JSON>} */
 module.exports = async function getAbility(name) {
-    let call = await formatPokemon(name);
+    if (isNaN(name)) var call = await formatPokemon(name);
+    else var call = name;
     let pokeData = await get(`pokemon/${call}`);
     if (pokeData !== undefined) {
         return pokeData.abilities.map(abl => {
@@ -15,7 +16,7 @@ module.exports = async function getAbility(name) {
                 is_hidden: abl.is_hidden
             }
         })
-    } else {
+    } else if (isNaN(name)) {
         call = format(name);
         let abilityData = await get(`ability/${call}`);
         if (abilityData !== undefined) {
@@ -39,6 +40,6 @@ module.exports = async function getAbility(name) {
             }
             return abilityData;
         }
-        return undefined;
     }
+    return undefined;
 }
