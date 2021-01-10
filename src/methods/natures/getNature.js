@@ -1,4 +1,4 @@
-const get = require('../../fetch/fetch');
+const get = require('../../fetch/get/get');
 const { getLang } = require('../../utils/Variables');
 
 /** Returns an Object that contains the increased and decreased stat caused by the nature.

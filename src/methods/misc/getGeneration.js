@@ -1,4 +1,4 @@
-const get = require('../../fetch/fetch');
+const get = require('../../fetch/get/get');
 const { getLang } = require('../../utils/Variables');
 /** Returns data on the generation in JSON format.
  * @param {'1'|'2'|'3'|'4'|'5'|'6'|'7'|'8'} generation

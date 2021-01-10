@@ -1,4 +1,4 @@
-const get = require('../../fetch/fetch');
+const get = require('../../fetch/get/get');
 
 /** Returns an Array containing all of their names.
  * @param {'item'|'pokemon'|'ability'|'type'|'move'|'nature'|'region'} type

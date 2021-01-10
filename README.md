@@ -22,7 +22,6 @@
 - [Example Usage](#example-usage)
     - [Methods](#methods)
 - [Links](#links)
-    - [Dependecies](#dependencies)
 
 ## About
 
@@ -31,7 +30,7 @@ pokemon.js is a [Node.js](https://nodejs.org) module that makes interacting with
 ## Installation
 
 **Node.js 12.0.0 or newer is required.**  
-Ignore any warnings about unmet peer dependencies, as they're all optional.
+No dependencies are required.
 
 `npm install pokemon.js`
 
@@ -75,13 +74,12 @@ Returns data on the generation in JSON format.
 - **`getAll(type)`**:  
 Returns an Array that contains the names of all the specified type.
 - **`setLanguage(language)`**:  
-Sets the language to the language you prefer if available. 
+Sets the language to the language you prefer if available.
+- **`getLanguage()`**  
+Returns the current language.
 
 ## Links
 
 - [GitHub](https://github.com/musubi3/pokemon.js.git)
-
-### Dependencies
-
-- [node-fetch](https://www.npmjs.com/package/node-fetch)
+- [PokéAPI](https://pokeapi.co/)
 

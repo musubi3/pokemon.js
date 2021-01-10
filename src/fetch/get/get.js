@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+const fetch = require('../fetch/lib');
 const BASE_URL = "https://pokeapi.co/api/v2/"
 
 /** @param {String} data */

@@ -1,4 +1,4 @@
-const get = require('../../fetch/fetch');
+const get = require('../../fetch/get/get');
 const { typeLogos } = require('../../utils/Constants');
 const { format, formatPokemon } = require('../../utils/utils');
 const { getLang } = require('../../utils/Variables');

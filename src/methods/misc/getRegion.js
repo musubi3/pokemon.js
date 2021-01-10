@@ -1,4 +1,4 @@
-const get = require('../../fetch/fetch');
+const get = require('../../fetch/get/get');
 const { getLang } = require('../../utils/Variables');
 /** Returns data on the region in JSON format.
  * @param {'kanto'|'johto'|'hoenn'|'sinnoh'|'unova'|'kalos'|'alola'|'galar'} region 

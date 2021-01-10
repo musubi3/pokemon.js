@@ -1,4 +1,4 @@
-const get = require('../../fetch/fetch');
+const get = require('../../fetch/get/get');
 const { formatPokemon } = require('../../utils/utils');
 
 /** Returns an Array of the forms for the pokemon.

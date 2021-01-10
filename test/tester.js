@@ -1,23 +1,20 @@
 const Pokemon = require('../src');
+let count = 0;
 
-Pokemon.getForms('charizard').then(console.log);
-
-Pokemon.getAll('region').then(console.log);
-
-Pokemon.setLanguage('english');
-Pokemon.getAbility('prankster').then(console.log);
-
-Pokemon.setLanguage('spanish');
-Pokemon.getItem('life orb').then(console.log);
-
-Pokemon.setLanguage('french');
-Pokemon.getMove('ice beam').then(console.log);
-
-Pokemon.setLanguage('italian');
-Pokemon.getRegion('unova').then(console.log);
-
-Pokemon.setLanguage('japanese');
-Pokemon.getGeneration('4')
-
-Pokemon.setLanguage('chinese-simplified');
-Pokemon.getPokemon('pikachu').then(console.log);
+if (Pokemon.setLanguage('english')) count++;
+Pokemon.canLearn('shuckle', 'protect').then(count++).catch(console.log);
+Pokemon.getAbility('lugia').then(count++).catch(console.log);
+Pokemon.getAbility('prankster').then(count++).catch(console.log);
+Pokemon.getEvolutionLine('torterra').then(count++).catch(console.log);
+Pokemon.getForms('charizard').then(count++).catch(console.log);
+Pokemon.getPokemon('pikachu').then(count++).catch(console.log);
+Pokemon.getSprites('lucario').then(count++).catch(console.log);
+Pokemon.getStats('rayquaza').then(count++).catch(console.log);
+Pokemon.getType('squirtle').then(count++).catch(console.log);
+Pokemon.getType('water').then(count++).catch(console.log);
+Pokemon.getItem('life orb').then(count++).catch(console.log);
+Pokemon.getMove('ice beam').then(count++).catch(console.log);
+Pokemon.getAll('region').then(count++).catch(console.log);
+Pokemon.getGeneration('4').then(count++).catch(console.log);
+Pokemon.getRegion('unova').then(count++).catch(console.log);
+console.log(`${count} tests have been passed`);

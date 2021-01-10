@@ -1,5 +1,5 @@
-const get = require('../../fetch/fetch');
-const fetch = require('node-fetch');
+const get = require('../../fetch/get/get');
+const fetch = require('../../fetch/fetch/lib');
 const { formatPokemon } = require('../../utils/utils');
 
 /** Returns an Array of the evolution line of the pokemon.
