@@ -1,3 +1,3 @@
 const Pokemon = require('../src');
 
-Pokemon.getMove('trick room').then(console.log);
+Pokemon.getPokemon('tapu koko').then(console.log);

@@ -1,3 +1,4 @@
+
 module.exports = {
     getPokemon: require('./methods/pokemon/getPokemon'),
     getType: require('./methods/pokemon/getType'),
@@ -14,5 +15,7 @@ module.exports = {
     getGeneration: require('./methods/misc/getGeneration'),
     getRegion: require('./methods/misc/getRegion'),
     setLanguage: require('./methods/language/setLanguage'),
-    getLanguage: require('./methods/language/getLanguage')
+    getLanguage: require('./methods/language/getLanguage'),
+    /** Pokemon Go Methods */
+    pogo: require('./pogo')
 }

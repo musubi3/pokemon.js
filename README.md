@@ -32,7 +32,7 @@ pokemon.js is a [Node.js](https://nodejs.org) module that makes interacting with
 **Node.js 12.0.0 or newer is required.**  
 No dependencies are required.
 
-`npm install pokemon.js`
+`npm install pokemon.js`  
 
 ## Example Usage
 
@@ -82,4 +82,5 @@ Returns the current language.
 
 - [GitHub](https://github.com/musubi3/pokemon.js.git)
 - [PokéAPI](https://pokeapi.co/)
+- [PoGoAPI](https://pogoapi.net/documentation/)
 

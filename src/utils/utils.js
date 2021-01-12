@@ -3,6 +3,8 @@ const get = require('../fetch/get/get');
 module.exports = {
     /** @param {String} name */
     async formatPokemon(name) {
+        if (name.toLowerCase().includes('alolan')) name = name.toLowerCase().replace('alolan', 'alola');
+        else if (name.toLowerCase().includes('galarian')) name = name.toLowerCase().replace('galarian', 'galar');
         if (name.split(' ').length > 1) {
             let words = name.split(' ').map(w => w.toLowerCase());
             if (words.length === 2) {

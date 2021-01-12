@@ -25,6 +25,13 @@ module.exports = async function getPokemon(pokemon) {
         }
         pokeData['pokedex_numbers'] = speciesData['pokedex_numbers'].map(n => { return { entry_number: n.entry_number, name: n.pokedex.name } });
         pokeData['has_gender_differences'] = speciesData['has_gender_differences'];
+        if (speciesData['gender_rate'] !== -1)
+            pokeData['gender_rate'] = {
+                male: 100 - (speciesData['gender_rate'] / 8 * 100),
+                female: speciesData['gender_rate'] / 8 * 100,
+                genderless: false
+            }
+        else pokeData['gender_rate'] = { male: 0, female: 0, genderless: true }
         pokeData['egg_groups'] = speciesData['egg_groups'].map(g => g.name);
         pokeData['is_baby'] = speciesData['is_baby'];
         pokeData['is_legendary'] = speciesData['is_legendary'];
