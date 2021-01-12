@@ -1,4 +1,4 @@
-const fetch = require('../../fetch/lib');
+const fetch = require('../../fetch/get/get');
 const BASE_URL = "https://pogoapi.net/api/v1/"
 
 /** 
