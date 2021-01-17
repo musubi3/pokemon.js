@@ -24,6 +24,13 @@ module.exports = async function getPokemon(pokemon) {
             delete pokeData['names'];
         }
         pokeData['pokedex_numbers'] = speciesData['pokedex_numbers'].map(n => { return { entry_number: n.entry_number, name: n.pokedex.name } });
+        pokeData['pokedex_text_entries'] = speciesData['flavor_text_entries'].map(f => {
+            return {
+                flavor_text: f.flavor_text,
+                language: f.language.name,
+                version: f.version.name,
+            };
+        });
         pokeData['has_gender_differences'] = speciesData['has_gender_differences'];
         if (speciesData['gender_rate'] !== -1)
             pokeData['gender_rate'] = {
