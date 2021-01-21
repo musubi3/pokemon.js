@@ -25,5 +25,13 @@ module.exports = {
             return name.toLowerCase();
         }
         return name.toLowerCase();
-    }
+    },
+    async isValid(response) {
+        const contentType = response.headers.get("content-type");
+        if (contentType && contentType.indexOf("application/json") !== -1) {
+            return await response.json();
+        } else {
+            return false;
+        }
+    },
 }
