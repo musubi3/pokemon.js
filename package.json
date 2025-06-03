@@ -8,6 +8,7 @@
   "description": "A JavaScript library that makes interacting with PokeAPI easier",
   "author": "musubi",
   "license": "ISC",
+  "type": "module",
   "main": "./src/index.js",
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "js",
     "api"
   ],
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
 }
