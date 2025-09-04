@@ -4,7 +4,7 @@
   },
   "name": "pokemon.js",
   "version": "2.0.0",
-  "description": "A JavaScript wrapper that makes interacting with PokeAPI easier",
+  "description": "A Node.js modeule that makes interacting with PokeAPI easier",
   "author": "musubi",
   "license": "ISC",
   "type": "module",
