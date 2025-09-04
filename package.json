@@ -1,11 +1,10 @@
 {
   "scripts": {
-    "test": "node ./test/tester",
-    "dev": "node ./test/dev"
+    "test": "node ./test/test.js"
   },
   "name": "pokemon.js",
-  "version": "1.1.8",
-  "description": "A JavaScript library that makes interacting with PokeAPI easier",
+  "version": "2.0.0",
+  "description": "A JavaScript wrapper that makes interacting with PokeAPI easier",
   "author": "musubi",
   "license": "ISC",
   "type": "module",
