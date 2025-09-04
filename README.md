@@ -35,50 +35,31 @@ No dependencies are required.
 ## Example Usage
 
 ```js
-const Pokemon = require('pokemon.js');
+import Pokemon from 'pokemon.js';
 
-Pokemon.setLanguage('english');
-
-Pokemon.getPokemon('pikachu').then(console.log);
+Pokemon.get_pokemon('zorua').then(console.log);
 ```
 ### Methods
 
-- **`getPokemon(pokemon)`**:  
+**`get_pokemon(pokemon)`**:  
 Returns data for the pokémon in JSON format.
-- **`getType(pokemon | type)`**:  
-Returns an Array that contains the pokémon's type(s) or returns data for the type in JSON format.
-- **`getAbility(pokemon | ability)`**:  
-Returns an Array that contains the pokémon's abilities or returns data for the ability in JSON format.
-- **`getSprites(pokemon)`**:  
-Returns an Object that contains the sprites for the pokémon.
-- **`getStats(pokemon)`**:  
-Returns an Object that contains the stats for the pokémon.
-- **`getForms(pokemon)`**:  
-Returns an Array that contains the forms for the pokémon.
-- **`getEvolutionLine(pokemon)`**:  
+**`get_type(type)`**:  
+Returns data for the type in JSON format.
+**`get_ability(ability)`**:  
+Returns data for the ability in JSON format.
+- **`get_evolution_line(pokemon)`**:  
 Returns an Array that contains the evolution line of the pokémon.
-- **`canLearn(pokemon)`**:  
-Determines whether the pokémon can learn a move, retruning true or false.
-- **`getMove(pokemon | move)`**:  
-Returns an Array that contains the moves the pokémon learns or data on the move in JSON format.
-- **`getNature(nature)`**:  
+- **`get_move(move)`**:  
+Returns data on the move in JSON format.
+- **`get_nature(nature)`**:  
 Returns an Object that contains the increased and decreased stat caused by the nature.
-- **`getItem(item)`**:  
+- **`get_item(item)`**:  
 Returns data on the item in JSON format.
-- **`getRegion(region)`**:  
-Returns data on the region in JSON format.
-- **`getGeneration(generation)`**:  
+- **`get_generation(generation)`**:  
 Returns data on the generation in JSON format.
-- **`getAll(type)`**:  
-Returns an Array that contains the names of all the specified type.
-- **`setLanguage(language)`**:  
-Sets the language to the language you prefer if available.
-- **`getLanguage()`**  
-Returns the current language.
 
 ## Links
 
 - [GitHub](https://github.com/musubi3/pokemon.js.git)
 - [PokéAPI](https://pokeapi.co/)
-- [PoGoAPI](https://pogoapi.net/documentation/)
 

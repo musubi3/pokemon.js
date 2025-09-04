@@ -6,9 +6,8 @@ import get_move from './PokeAPI/get_move.js';
 import get_pokemon from './PokeAPI/get_pokemon.js';
 import get_pokemon_species from './PokeAPI/get_pokemon_species.js';
 import get_type from './PokeAPI/get_type.js';
-import set_language from './PokeAPI/set_language.js';
 
-const Pokemon = {
+export default {
     get_pokemon,
     get_pokemon_species,
     get_evolution_line,
@@ -17,12 +16,6 @@ const Pokemon = {
     get_move,
     get_item,
     get_generation
-};
-
-const PokeGO = {};
-
-export default {
-    Pokemon
 };
 
 
