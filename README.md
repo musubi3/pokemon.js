@@ -55,6 +55,7 @@ Returns an Array that contains the evolution line of the pokémon.
 
 **`get_move(move)`**:  
 Returns data on the move in JSON format.
+
 **`get_nature(nature)`**:  
 Returns an Object that contains the increased and decreased stat caused by the nature.
 
