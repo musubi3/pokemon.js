@@ -67,6 +67,7 @@ Returns data on the generation in JSON format.
 
 ## Links
 
+- [NPM](https://www.npmjs.com/package/pokemon.js)
 - [GitHub](https://github.com/musubi3/pokemon.js.git)
 - [PokéAPI](https://pokeapi.co/)
 
