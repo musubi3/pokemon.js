@@ -18,7 +18,7 @@
 - [About](#about)
 - [Installation](#installation)
 - [Example Usage](#example-usage)
-    - [Methods](#methods)
+- [Methods](#methods)
 - [Links](#links)
 
 ## About
