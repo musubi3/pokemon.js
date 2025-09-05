@@ -1,5 +1,5 @@
 node_modules
-/test
+module_test
 docs/_site
 docs/Gemfile.lock
 .npmignore
