@@ -41,28 +41,28 @@ Pokemon.get_pokemon('zorua').then(console.log);
 ```
 ### Methods
 
-**`get_pokemon(pokemon)`**:  
+**`get_pokemon(pokemon, fields=[])`**:  
 Returns data for the pokémon in JSON format.
 
-**`get_type(type)`**:  
-Returns data for the type in JSON format.
+**`get_type(name, is_pokemon=false, fields=[])`**:  
+Returns an Array of the pokemon's types or returns data for the type in JSON format.
 
-**`get_ability(ability)`**:  
-Returns data for the ability in JSON format.
+**`get_ability(name, is_pokemon=false, fields=[])`**:  
+Returns an Array of the pokemon's abilities or returns data for the ability in JSON format.
 
-**`get_evolution_line(pokemon)`**:  
+**`get_evolution_line(pokemon, fields=[])`**:  
 Returns an Array that contains the evolution line of the pokémon.
 
-**`get_move(move)`**:  
+**`get_move(move, fields=[])`**:  
 Returns data on the move in JSON format.
 
-**`get_nature(nature)`**:  
+**`get_nature(nature, fields=[])`**:  
 Returns an Object that contains the increased and decreased stat caused by the nature.
 
-**`get_item(item)`**:  
+**`get_item(item, fields=[])`**:  
 Returns data on the item in JSON format.
 
-**`get_generation(generation)`**:  
+**`get_generation(generation, fields=[])`**:  
 Returns data on the generation in JSON format.
 
 ## Links

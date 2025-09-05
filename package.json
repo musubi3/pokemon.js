@@ -3,7 +3,7 @@
     "test": "node ./test/test.js"
   },
   "name": "pokemon.js",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "A Node.js modeule that makes interacting with PokeAPI easier",
   "author": "musubi",
   "license": "ISC",
