@@ -65,6 +65,12 @@ Returns data on the item in JSON format.
 **`get_generation(generation, fields=[])`**:  
 Returns data on the generation in JSON format.
 
+**`get_region(region, fields=[])`**:  
+Returns data on the region in JSON format.
+
+**`get_all(type)`**:  
+Returns an Array that contains the names of all the specified type.
+
 ## Links
 
 - [NPM](https://www.npmjs.com/package/pokemon.js)

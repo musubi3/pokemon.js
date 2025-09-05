@@ -1,9 +1,9 @@
 {
   "scripts": {
-    "test": "node ./test/test.js"
+    "test": "node ./module_test/test.js"
   },
   "name": "pokemon.js",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "A Node.js modeule that makes interacting with PokeAPI easier",
   "author": "musubi",
   "license": "ISC",
