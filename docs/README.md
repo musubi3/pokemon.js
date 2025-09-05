@@ -5,8 +5,8 @@
   </p>
   <br />
   <p>
-    <a href="https://www.npmjs.com/package/pokemon.js"><img src="https://img.shields.io/npm/v/pokemon.js.svg?color=brightgreen" alt="NPM Version" /></a>
-    <a href="https://www.npmjs.com/package/pokemon.js"><img src = "https://img.shields.io/npm/dt/pokemon.js.svg?maxAge=3600" alt="NPM Downloads"/></a>
+    <a href="https://www.npmjs.com/package/pokemon.js"><img src="https://img.shields.io/npm/v/pokemon.js.svg" alt="NPM Version" /></a>
+    <a href="https://www.npmjs.com/package/pokemon.js"><img src = "https://img.shields.io/npm/dt/pokemon.js.svg" alt="NPM Downloads"/></a>
   </p>
   <p>
     <a href="https://www.npmjs.com/package/pokemon.js"><img src="https://nodei.co/npm/pokemon.js.png" alt="npm installinfo" /></a>
