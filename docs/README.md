@@ -69,7 +69,7 @@ Returns data on the generation in JSON format.
 Returns data on the region in JSON format.
 
 **`get_all(type)`**:  
-Returns an Array that contains the names of all the specified type.
+Returns an Array containing names of all the specified resource type.
 
 ## Links
 

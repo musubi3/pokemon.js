@@ -1,6 +1,6 @@
 import get from "../utils/get.js";
 
-/** Returns an Array containing names of all the given resource type.
+/** Returns an Array containing names of all the specified resource type.
  * @param {'item'|'pokemon'|'ability'|'type'|'move'|'nature'|'region'} type
  * @returns {Promise<Array>} */
 export default async function get_all(type = 'pokemon') {
