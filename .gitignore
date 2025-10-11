@@ -4,3 +4,4 @@ module_test
 docs/_site
 docs/Gemfile.lock
 .npmignore
+/.vscode

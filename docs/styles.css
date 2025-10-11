@@ -1,0 +1,228 @@
+:root {
+  --color-accent: oklch(0.7686 0.1236 133.88);
+  --max-width: 100ch;
+}
+
+body {
+  font: 100%/1.5 system-ui;
+  margin-top: 0;
+}
+
+a {
+  color: oklch(from var(--color-accent) 65% c h);
+  text-decoration: none;
+}
+
+a:hover {
+  color: oklch(from var(--color-accent) 80% c h);
+  transition: all 0.2s ease;
+}
+
+.content {
+  max-width: var(--max-width);
+  margin-inline: max(1em, (100% - var(--max-width)) / 2);
+}
+
+.content h2 {
+  color: var(--color-accent);
+  border-bottom: 2px solid oklch(80% 3% 200);
+  padding-bottom: 0.5em;
+  margin-bottom: 1.5em;
+  font-size: 1.8em;
+}
+
+.project-header {
+  text-align: center;
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+  border-bottom: 2px solid oklch(80% 3% 200);
+}
+
+.project-hero {
+  max-width: 65ch;
+  height: auto;
+  margin-bottom: 0;
+}
+.project-author {
+  font-weight: 500;
+  font-size: large;
+}
+
+.project-date, .project-category {
+  background: oklch(from var(--color-accent) 95% 5% h);
+  border: 1px solid var(--color-accent);
+  color: oklch(from var(--color-accent) 55% c h);
+  margin: 0.2em;
+  padding: 0.35em 0.7em;
+  border-radius: 15px;
+}
+
+.project-toc {
+  background: oklch(from var(--color-accent) 97% 3% h);
+  padding: 1.5em;
+  border-radius: 8px;
+  margin: 2em 0;
+}
+
+.project-toc h2 {
+  margin-top: 0;
+}
+
+.project-toc ul {
+  list-style: none;
+  padding: 0;
+}
+
+.project-toc li {
+  margin: 0.5em 0;
+}
+
+.project-toc a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.project-toc a:hover {
+  text-decoration: underline;
+}
+
+body > nav {
+  display: flex;
+  margin-bottom: 2em;
+  max-width: 125ch;
+  margin-inline: max(1em, (100% - 125ch) / 2);
+  border-bottom: 1px solid oklch(80% 3% 200);
+}
+
+body > nav a {
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 0.9em;
+  transition: all 0.2s ease;
+}
+
+body > nav a:hover {
+  border-bottom: 0.4em solid var(--color-accent);
+  padding-bottom: 0.1em;
+  background-color: oklch(from var(--color-accent) 95% 5% h);
+}
+
+
+body > nav a.current {
+  border-bottom: 0.4em solid oklch(80% 3% 200);
+  padding-bottom: 0.1em
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 350%;
+}
+
+h2 {
+  font-size: 200%;
+}
+
+h3 {
+  font-size: 150%;
+}
+
+h4 {
+  font-size: 120%;
+}
+
+h5, h6 {
+  font-size: 110%;
+}
+
+strong {
+  color: oklch(from var(--color-accent) 55% c h);
+}
+
+.project-section {
+  margin: 3em 0;
+}
+
+.code-block {
+  background: oklch(from var(--color-accent) 97% 3% h);
+  padding: 1.5em;
+  border-radius: 8px;
+  border-left: 4px solid var(--color-accent);
+  overflow-x: auto;
+  font-family: monospace;
+  line-height: 1.4;
+}
+
+.install-command {
+  background: oklch(from var(--color-accent) 97% 3% h);
+  padding: 0.25em 0.5em;
+  border-radius: 6px;
+  display: inline-block;
+  font-family: monospace;
+  font-size: 1.1em;
+}
+
+.method-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.method {
+  padding: 1em;
+  background: white;
+  border-radius: 6px;
+  border-left: 3px solid var(--color-accent);
+  box-shadow: 0 2px 8px oklch(0% 0% 0 / 0.1);
+  border-right: 1px solid oklch(90% 3% 200);
+  border-top: 1px solid oklch(90% 3% 200);
+  border-bottom: 1px solid oklch(90% 3% 200);
+}
+
+.method:hover {
+  box-shadow: 0 4px 12px oklch(0% 0% 0 / 0.15);
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+
+.method h3 {
+  margin: 0 0 0.5em 0;
+  font-size: 1.1em;
+}
+
+.method code {
+  background: oklch(from var(--color-accent) 97% 3% h);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7em;
+  list-style: none;
+  padding: 0;
+}
+
+.links li a{
+  padding: 0.5em 1em;
+  border-radius: 25px;
+  margin: 0;
+  font-weight: 500;
+  background: oklch(from var(--color-accent) 95% 5% h);
+  border: 1px solid var(--color-accent);
+  color: oklch(from var(--color-accent) 55% c h);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.links li a:hover {
+  background: oklch(from var(--color-accent) 90% 5% h);
+}

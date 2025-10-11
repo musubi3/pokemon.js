@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Lee: pokemon.js</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <a href="https://musubi3.github.io/dsc106-portfolio">Home</a>
+        <a href="https://musubi3.github.io/dsc106-portfolio/resume/index.html">Resume</a>
+        <a href="https://musubi3.github.io/dsc106-portfolio/projects/index.html">Projects</a>
+        <a href="https://musubi3.github.io/dsc106-portfolio/contact/index.html">Contact</a>
+        <a href="https://github.com/musubi3" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/justin-lee-634719352/" target="_blank">LinkedIn</a>
+    </nav>
+
+    <div class="content project-detail">
+        <header class="project-header">
+            <h1>pokemon.js</h1>
+            <div class="project-meta">
+                <p class="project-author">Justin Lee</p>
+                <div class="project-info">
+                    <span class="project-date">Winter 2021</span>
+                    <span class="project-category">Personal Project</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="project-badges">
+            <a href="https://www.npmjs.com/package/pokemon.js">
+                <img src="https://img.shields.io/npm/v/pokemon.js.svg" alt="NPM Version">
+            </a>
+            <a href="https://www.npmjs.com/package/pokemon.js">
+                <img src="https://img.shields.io/npm/dt/pokemon.js.svg" alt="NPM Downloads">
+            </a>
+            <br><a href="https://www.npmjs.com/package/pokemon.js">
+                <img src="https://nodei.co/npm/pokemon.js.png" alt="npm installinfo">
+            </a>
+        </div>
+
+        <nav class="project-toc">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#installation">Installation</a></li>
+                <li><a href="#example-usage">Example Usage</a></li>
+                <li><a href="#methods">Methods</a></li>
+                <li><a href="#links">Links</a></li>
+            </ul>
+        </nav>
+
+        <h2 id="about">About</h2>
+
+        <p>pokemon.js is a <a href="https://nodejs.org">Node.js</a> module that makes interacting with <a
+                href="https://pokeapi.co/">PokéAPI</a> easier.</p>
+
+        <section id="installation" class="project-section">
+            <h2>Installation</h2>
+            <p><strong>Node.js 12.0.0 or newer is required.</strong><br>
+                No dependencies are required.</p>
+            <code class="install-command">npm install pokemon.js</code>
+        </section>
+
+        <section id="example-usage" class="project-section">
+            <h2>Example Usage</h2>
+            <pre class="code-block"><code class="language-javascript">import Pokemon from 'pokemon.js';
+
+Pokemon.get_pokemon('zorua').then(console.log);</code></pre>
+        </section>
+
+        <section id="methods" class="project-section">
+            <h2>Methods</h2>
+            <div class="method-list">
+                <div class="method">
+                    <h3><code>get_pokemon(pokemon, fields=[])</code></h3>
+                    <p>Returns data for the pokémon in JSON format.</p>
+                </div>
+
+                <div class="method">
+                    <h3><code>get_type(name, is_pokemon=false, fields=[])</code></h3>
+                    <p>Returns an Array of the pokemon's types or returns data for the type in JSON format.</p>
+                </div>
+
+                <div class="method">
+                    <h3><code>get_ability(name, is_pokemon=false, fields=[])</code></h3>
+                    <p>Returns an Array of the pokemon's abilities or returns data for the ability in JSON format.</p>
+                </div>
+
+                <div class="method">
+                    <h3><code>get_evolution_line(pokemon, fields=[])</code></h3>
+                    <p>Returns an Array that contains the evolution line of the pokémon.</p>
+                </div>
+
+                <div class="method">
+                    <h3><code>get_move(move, fields=[])</code></h3>
+                    <p>Returns data on the move in JSON format.</p>
+                </div>
+
+                <div class="method">
+                    <h3><code>get_nature(nature, fields=[])</code></h3>
+                    <p>Returns an Object that contains the increased and decreased stat caused by the nature.</p>
+                </div>
+
+                <div class="method">
+                    <h3><code>get_item(item, fields=[])</code></h3>
+                    <p>Returns data on the item in JSON format.</p>
+                </div>
+
+                <div class="method">
+                    <h3><code>get_generation(generation, fields=[])</code></h3>
+                    <p>Returns data on the generation in JSON format.</p>
+                </div>
+
+                <div class="method">
+                    <h3><code>get_region(region, fields=[])</code></h3>
+                    <p>Returns data on the region in JSON format.</p>
+                </div>
+
+                <div class="method">
+                    <h3><code>get_all(type)</code></h3>
+                    <p>Returns an Array containing names of all the specified resource type.</p>
+                </div>
+        </section>
+
+        <h2 id="links">Links</h2>
+
+        <ul class="links">
+            <li><a href="https://www.npmjs.com/package/pokemon.js">NPM</a></li>
+            <li><a href="https://github.com/musubi3/pokemon.js.git">GitHub</a></li>
+            <li><a href="https://pokeapi.co/">PokéAPI</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
