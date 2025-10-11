@@ -6,6 +6,8 @@
 body {
   font: 100%/1.5 system-ui;
   margin-top: 0;
+  background: linear-gradient(135deg, oklch(100% 3% 200) 0%, oklch(98% 3% 220) 100%);
+  min-height: 100vh;
 }
 
 a {
@@ -58,7 +60,7 @@ a:hover {
 }
 
 .project-toc {
-  background: oklch(from var(--color-accent) 97% 3% h);
+  background: oklch(from var(--color-accent) 96% 3% h);
   padding: 1.5em;
   border-radius: 8px;
   margin: 2em 0;
@@ -88,11 +90,16 @@ a:hover {
 
 body > nav {
   display: flex;
-  margin-bottom: 2em;
   max-width: 125ch;
   margin-inline: max(1em, (100% - 125ch) / 2);
   border-bottom: 1px solid oklch(80% 3% 200);
+  background: white;
+  box-shadow: 0 2px 16px oklch(0% 0% 0 / 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 1em auto 2em;
 }
+
 
 body > nav a {
   flex: 1;
@@ -150,7 +157,7 @@ strong {
 }
 
 .code-block {
-  background: oklch(from var(--color-accent) 97% 3% h);
+  background: oklch(from var(--color-accent) 96% 3% h);
   padding: 1.5em;
   border-radius: 8px;
   border-left: 4px solid var(--color-accent);
@@ -160,7 +167,7 @@ strong {
 }
 
 .install-command {
-  background: oklch(from var(--color-accent) 97% 3% h);
+  background: oklch(from var(--color-accent) 96% 3% h);
   padding: 0.25em 0.5em;
   border-radius: 6px;
   display: inline-block;
@@ -197,7 +204,7 @@ strong {
 }
 
 .method code {
-  background: oklch(from var(--color-accent) 97% 3% h);
+  background: oklch(from var(--color-accent) 96% 3% h);
   padding: 0.2em 0.4em;
   border-radius: 3px;
   font-size: 0.9em;
