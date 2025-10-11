@@ -13,11 +13,11 @@ body {
 a {
   color: oklch(from var(--color-accent) 65% c h);
   text-decoration: none;
+  transition: all 0.2s ease;
 }
 
 a:hover {
   color: oklch(from var(--color-accent) 80% c h);
-  transition: all 0.2s ease;
 }
 
 .content {
@@ -205,12 +205,12 @@ strong {
   border-right: 1px solid oklch(90% 3% 200);
   border-top: 1px solid oklch(90% 3% 200);
   border-bottom: 1px solid oklch(90% 3% 200);
+  transition: all 0.2s ease;
 }
 
 .method:hover {
   box-shadow: 0 4px 12px oklch(0% 0% 0 / 0.15);
   transform: translateY(-2px);
-  transition: all 0.2s ease;
 }
 
 .method h3 {
