@@ -99,6 +99,181 @@
   --text: oklch(85% 5% 200);
 }
 
+/* ANIMATIONS */
+.project-detail>* {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.project-header {
+  animation-delay: 0.1s;
+}
+
+.project-badges {
+  animation-delay: 0.2s;
+}
+
+.project-toc {
+  animation-delay: 0.3s;
+}
+
+#about {
+  animation-delay: 0.4s;
+}
+
+#installation {
+  animation-delay: 0.5s;
+}
+
+#example-usage {
+  animation-delay: 0.6s;
+}
+
+#methods {
+  animation-delay: 0.7s;
+}
+
+#links {
+  animation-delay: 0.8s;
+}
+
+/* Method cards with "catch" effect */
+.method {
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  animation: catchCard 0.6s ease forwards;
+}
+
+.method:nth-child(1) {
+  animation-delay: 0.7s;
+}
+
+.method:nth-child(2) {
+  animation-delay: 0.75s;
+}
+
+.method:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+.method:nth-child(4) {
+  animation-delay: 0.85s;
+}
+
+.method:nth-child(5) {
+  animation-delay: 0.9s;
+}
+
+.method:nth-child(6) {
+  animation-delay: 0.95s;
+}
+
+.method:nth-child(7) {
+  animation-delay: 1s;
+}
+
+.method:nth-child(8) {
+  animation-delay: 1.05s;
+}
+
+.method:nth-child(9) {
+  animation-delay: 1.1s;
+}
+
+.method:nth-child(10) {
+  animation-delay: 1.15s;
+}
+
+.method:nth-child(11) {
+  animation-delay: 1.2s;
+}
+
+/* Badge animations */
+.project-badges img {
+  display: inline-block;
+  animation: badgeBounce 0.8s ease 0.3s forwards;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.project-badges a:nth-child(1) img {
+  animation-delay: 0.3s;
+}
+
+.project-badges a:nth-child(2) img {
+  animation-delay: 0.4s;
+}
+
+.project-badges a:nth-child(3) img {
+  animation-delay: 0.5s;
+}
+
+/* Link tags */
+.links li a {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: evolveIn 0.5s ease forwards;
+}
+
+.links li:nth-child(1) a {
+  animation-delay: 0.8s;
+}
+
+.links li:nth-child(2) a {
+  animation-delay: 0.85s;
+}
+
+.links li:nth-child(3) a {
+  animation-delay: 0.9s;
+}
+
+/* Keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes catchCard {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+
+  50% {
+    transform: translateY(-5px) scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes badgeBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(-20px);
+  }
+
+  60% {
+    transform: scale(1.1) translateY(5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes evolveIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 body {
   font: 100%/1.5 system-ui;
   margin-top: 0;
@@ -222,7 +397,8 @@ a:hover {
 .nav-wrapper nav a:hover {
   border-bottom: 0.4em solid var(--color-accent);
   padding-bottom: 0.1em;
-  background-color: color-mix(in oklch, color-mix(in oklch, var(--color-accent, oklch(65% 50% 200)), canvas 85%) 70%, transparent);;
+  background-color: color-mix(in oklch, color-mix(in oklch, var(--color-accent, oklch(65% 50% 200)), canvas 85%) 70%, transparent);
+  ;
 }
 
 
