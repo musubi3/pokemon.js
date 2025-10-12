@@ -68,9 +68,8 @@ document.addEventListener('DOMContentLoaded', function () {
     a.href = url;
     a.textContent = title;
 
-    // Highlight current page - FIX THIS PART
     // The current logic might not work on standalone pages
-    if (window.location.pathname.includes(p.url.replace('index.html', ''))) {
+    if (a.pathname == '/projects/index.html') {
       a.classList.add('current');
     }
 
