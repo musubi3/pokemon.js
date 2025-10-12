@@ -42,7 +42,7 @@
     --toc-bg: oklch(from var(--color-accent) 29% 3% h);
     --tag-text: var(--color-accent);
     --tag-hover: oklch(from var(--color-accent) 55% c h);
-    --code: oklch(from var(--color-accent) 35% 3% h);
+    --code: oklch(from var(--color-accent) 35% 10% h);
     --card-bg: oklch(25% 3% 200);
     --card-shadow: oklch(0% 0% 0 / 0.2);
     --card-border: oklch(35% 3% 200);
@@ -89,7 +89,7 @@
   --toc-bg: oklch(from var(--color-accent) 29% 3% h);
   --tag-text: var(--color-accent);
   --tag-hover: oklch(from var(--color-accent) 55% c h);
-  --code: oklch(from var(--color-accent) 35% 3% h);
+  --code: oklch(from var(--color-accent) 35% 10% h);
   --card-bg: oklch(25% 3% 200);
   --card-shadow: oklch(0% 0% 0 / 0.2);
   --card-border: oklch(35% 3% 200);
@@ -222,7 +222,7 @@ a:hover {
 .nav-wrapper nav a:hover {
   border-bottom: 0.4em solid var(--color-accent);
   padding-bottom: 0.1em;
-  background-color: color-mix(in oklch, var(--color-accent, oklch(65% 50% 200)), canvas 85%);
+  background-color: color-mix(in oklch, color-mix(in oklch, var(--color-accent, oklch(65% 50% 200)), canvas 85%) 70%, transparent);;
 }
 
 
