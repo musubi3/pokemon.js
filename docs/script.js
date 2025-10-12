@@ -1,6 +1,5 @@
 try { navigator.mediaSession?.setActionHandler('enterpictureinpicture', null); } catch (e) { }
 
-// Add this to each project's JavaScript file
 (function () {
   // Get theme from URL parameter
   const urlParams = new URLSearchParams(window.location.search);
@@ -20,7 +19,6 @@ try { navigator.mediaSession?.setActionHandler('enterpictureinpicture', null); }
     finalTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   }
 
-  // Apply the theme
   if (finalTheme === 'light' || finalTheme === 'dark') {
     document.documentElement.setAttribute('color-scheme', finalTheme);
     document.documentElement.style.setProperty('color-scheme', finalTheme);
@@ -31,7 +29,7 @@ try { navigator.mediaSession?.setActionHandler('enterpictureinpicture', null); }
 document.addEventListener('DOMContentLoaded', function () {
   const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
     ? "/"
-    : "https://musubi3.github.io/dsc106-portfolio/";
+    : "https://musubi3.github.io/";
 
   let pages = [
     { url: 'index.html', title: 'Home' },
@@ -91,50 +89,61 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // MOBILE NAV
   function updateIcon() {
-    toggle.innerHTML = nav.classList.contains('active') ? '✕' : '☰';
+    if (toggle) {
+      toggle.innerHTML = nav.classList.contains('active') ? '✕' : '☰';
+    }
   }
 
-  toggle.addEventListener('click', function (e) {
-    e.stopPropagation();
-    nav.classList.toggle('active');
-    updateIcon();
-  });
-
-  // Close menu when clicking on a link
-  document.querySelectorAll('#main-nav a').forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('active');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      nav.classList.toggle('active');
       updateIcon();
     });
-  });
 
-  // Close menu when clicking outside
-  document.addEventListener('click', function (event) {
-    if (!nav.contains(event.target) && !toggle.contains(event.target)) {
-      nav.classList.remove('active');
-      updateIcon();
-    }
-  });
+    // Close menu when clicking on a link
+    document.querySelectorAll('#main-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        updateIcon();
+      });
+    });
 
-  // DARK MODE
+    // Close menu when clicking outside
+    document.addEventListener('click', function (event) {
+      if (!nav.contains(event.target) && !toggle.contains(event.target)) {
+        nav.classList.remove('active');
+        updateIcon();
+      }
+    });
+  }
+
+  // DARK MODE - Initialize the toggle
   addDarkModeSwitcher();
 });
 
 function addDarkModeSwitcher() {
-  document.body.insertAdjacentHTML(
-    'afterbegin',
-    `
+  console.log('Initializing dark mode switcher');
+  
+  // Create the toggle element
+  const toggleHTML = `
     <div class="theme-switcher">
       <label class="switch">
         <input type="checkbox" id="theme-toggle">
         <span class="slider"></span>
       </label>
       <span class="theme-label">Dark Mode</span>
-    </div>`
-  );
+    </div>`;
+  
+  document.body.insertAdjacentHTML('afterbegin', toggleHTML);
 
   const toggle = document.querySelector('#theme-toggle');
   const label = document.querySelector('.theme-label');
+
+  if (!toggle || !label) {
+    console.error('Theme toggle elements not found');
+    return;
+  }
 
   // Load saved preference
   if ('colorScheme' in localStorage) {
@@ -142,11 +151,9 @@ function addDarkModeSwitcher() {
     if (savedScheme === 'dark') {
       toggle.checked = true;
       label.textContent = 'Dark Mode';
-      applyColorScheme('dark');
     } else if (savedScheme === 'light') {
       toggle.checked = false;
       label.textContent = 'Light Mode';
-      applyColorScheme('light');
     } else {
       // Auto mode
       const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
