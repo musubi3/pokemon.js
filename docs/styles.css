@@ -8,6 +8,7 @@ body {
   margin-top: 0;
   background: linear-gradient(135deg, oklch(100% 3% 200) 0%, oklch(98% 3% 220) 100%);
   min-height: 100vh;
+  padding-bottom: 1.5em;
 }
 
 a {
@@ -102,7 +103,7 @@ a:hover {
   max-width: 125ch;
   margin-inline: max(1em, (100% - 125ch) / 2);
   border-bottom: 1px solid oklch(80% 3% 200);
-  background: white;
+  background: rgba(255, 255, 255, 0.97);
   box-shadow: 0 2px 16px oklch(0% 0% 0 / 0.2);
   border-radius: 12px;
   overflow: hidden;
@@ -247,4 +248,79 @@ strong {
 
 .links li a:hover {
   background: oklch(from var(--color-accent) 90% 5% h);
+}
+
+/* Hide hamburger menu by default (desktop) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  padding: 0.5em;
+  cursor: pointer;
+  color: var(--color-accent);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .nav-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.97);
+    width: 100%; /* Ensures full width */
+    border-bottom: 1px solid oklch(90% 3% 200);
+    margin: 0; /* Remove margin gap */
+  }
+
+  .nav-wrapper nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 90%; /* make sure it stretches across */
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 4px 12px oklch(0% 0% 0 / 0.2);
+    border-radius: 12px;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .nav-wrapper nav.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Make sure hamburger stays visible and clean */
+  .menu-toggle {
+    display: block;
+    font-size: 1.8em;
+    color: var(--color-accent);
+    background: transparent !important;
+    border: none;
+    cursor: pointer;
+    padding: 0.5em 0.8em;
+  }
+
+  .menu-toggle:focus,
+  .menu-toggle:active {
+    outline: none;
+    background: transparent !important; /* Prevent green box */
+  }
+
+  body {
+    margin: 0;
+    overflow-x: hidden; /* avoid horizontal scrollbars */
+    padding-bottom: 1.5em;
+  }
 }
