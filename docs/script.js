@@ -68,8 +68,9 @@ document.addEventListener('DOMContentLoaded', function () {
     a.href = url;
     a.textContent = title;
 
-    // Highlight current page    
-    if (a.pathname === '/projects/index.html') {
+    // Highlight current page - FIX THIS PART
+    // The current logic might not work on standalone pages
+    if (window.location.pathname.includes(p.url.replace('index.html', ''))) {
       a.classList.add('current');
     }
 
@@ -87,13 +88,14 @@ document.addEventListener('DOMContentLoaded', function () {
   navWrapper.appendChild(nav);
   document.body.prepend(navWrapper);
 
-  // MOBILE NAV
+  // MOBILE NAV - ADD NULL CHECKS
   function updateIcon() {
-    if (toggle) {
+    if (toggle && nav) {
       toggle.innerHTML = nav.classList.contains('active') ? '✕' : '☰';
     }
   }
 
+  // Only add event listeners if elements exist
   if (toggle && nav) {
     toggle.addEventListener('click', function (e) {
       e.stopPropagation();
@@ -101,21 +103,30 @@ document.addEventListener('DOMContentLoaded', function () {
       updateIcon();
     });
 
-    // Close menu when clicking on a link
-    document.querySelectorAll('#main-nav a').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('active');
-        updateIcon();
-      });
-    });
+    // Close menu when clicking on a link - wait for elements to exist
+    setTimeout(() => {
+      const navLinks = document.querySelectorAll('#main-nav a');
+      if (navLinks.length > 0) {
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            if (nav) {
+              nav.classList.remove('active');
+              updateIcon();
+            }
+          });
+        });
+      }
+    }, 100);
 
     // Close menu when clicking outside
     document.addEventListener('click', function (event) {
-      if (!nav.contains(event.target) && !toggle.contains(event.target)) {
+      if (nav && toggle && !nav.contains(event.target) && !toggle.contains(event.target)) {
         nav.classList.remove('active');
         updateIcon();
       }
     });
+  } else {
+    console.log('Navigation elements not found, skipping mobile nav setup');
   }
 
   // DARK MODE - Initialize the toggle
@@ -124,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function addDarkModeSwitcher() {
   console.log('Initializing dark mode switcher');
-  
+
   // Create the toggle element
   const toggleHTML = `
     <div class="theme-switcher">
@@ -134,7 +145,7 @@ function addDarkModeSwitcher() {
       </label>
       <span class="theme-label">Dark Mode</span>
     </div>`;
-  
+
   document.body.insertAdjacentHTML('afterbegin', toggleHTML);
 
   const toggle = document.querySelector('#theme-toggle');
