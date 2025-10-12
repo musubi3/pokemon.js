@@ -272,7 +272,7 @@ strong {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.97);
+    background: rgba(255, 255, 255, 0.95);
     width: 100%; /* Ensures full width */
     border-bottom: 1px solid oklch(90% 3% 200);
     margin: 0; /* Remove margin gap */
@@ -286,7 +286,7 @@ strong {
     left: 0;
     right: 0;
     width: 90%; /* make sure it stretches across */
-    background: rgba(255, 255, 255, 0.97);
+    background: rgba(255, 255, 255, 0.95);
     box-shadow: 0 4px 12px oklch(0% 0% 0 / 0.2);
     border-radius: 12px;
     transform: translateY(-100%);
