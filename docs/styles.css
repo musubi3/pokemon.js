@@ -111,34 +111,6 @@ body {
   padding-bottom: 1.5em;
 }
 
-.content h2 {
-  border-bottom: 2px solid var(--h2-bottom);
-  padding-bottom: 0.5em;
-  margin-bottom: 1.5em;
-  font-size: 1.8em;
-}
-
-.project-header {
-  text-align: center;
-  margin-bottom: 2em;
-  padding-bottom: 1em;
-  border-bottom: 2px solid var(--h2-bottom);
-}
-
-.project-author {
-  font-weight: 500;
-  font-size: large;
-}
-
-.project-date,
-.project-category {
-  margin: 0.2em;
-}
-
-.project-section {
-  margin: 3em 0;
-}
-
 .code-block {
   background: var(--code);
   padding: 1.5em;
