@@ -169,5 +169,5 @@ body {
 
 .links li a:hover {
   background: var(--tag-hover);
-  color: var(--tag-text);
+  color: white;
 }
