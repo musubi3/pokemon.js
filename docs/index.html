@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-     <script src="script.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://musubi3.github.io/global.css">
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,8 +22,8 @@
             <div class="project-meta">
                 <p class="project-author">Justin Lee</p>
                 <div class="project-info">
-                    <span class="project-date">Winter 2021</span>
-                    <span class="project-category">Personal Project</span>
+                    <span class="tag project-date">Winter 2021</span>
+                    <span class="tag project-category">Personal Project</span>
                 </div>
             </div>
         </header>
@@ -36,7 +37,7 @@
             </a>
         </div>
 
-        <nav class="project-toc">
+        <nav class="toc">
             <h2>Table of Contents</h2>
             <ul>
                 <li><a href="#about">About</a></li>
@@ -69,52 +70,52 @@ Pokemon.get_pokemon('zorua').then(console.log);</code></pre>
         <section id="methods" class="project-section">
             <h2>Methods</h2>
             <div class="method-list">
-                <div class="method">
+                <div class="card method">
                     <h3><code>get_pokemon(pokemon, fields=[])</code></h3>
                     <p>Returns data for the pokémon in JSON format.</p>
                 </div>
 
-                <div class="method">
+                <div class="card method">
                     <h3><code>get_type(name, is_pokemon=false, fields=[])</code></h3>
                     <p>Returns an Array of the pokemon's types or returns data for the type in JSON format.</p>
                 </div>
 
-                <div class="method">
+                <div class="card method">
                     <h3><code>get_ability(name, is_pokemon=false, fields=[])</code></h3>
                     <p>Returns an Array of the pokemon's abilities or returns data for the ability in JSON format.</p>
                 </div>
 
-                <div class="method">
+                <div class="card method">
                     <h3><code>get_evolution_line(pokemon, fields=[])</code></h3>
                     <p>Returns an Array that contains the evolution line of the pokémon.</p>
                 </div>
 
-                <div class="method">
+                <div class="card method">
                     <h3><code>get_move(move, fields=[])</code></h3>
                     <p>Returns data on the move in JSON format.</p>
                 </div>
 
-                <div class="method">
+                <div class="card method">
                     <h3><code>get_nature(nature, fields=[])</code></h3>
                     <p>Returns an Object that contains the increased and decreased stat caused by the nature.</p>
                 </div>
 
-                <div class="method">
+                <div class="card method">
                     <h3><code>get_item(item, fields=[])</code></h3>
                     <p>Returns data on the item in JSON format.</p>
                 </div>
 
-                <div class="method">
+                <div class="card method">
                     <h3><code>get_generation(generation, fields=[])</code></h3>
                     <p>Returns data on the generation in JSON format.</p>
                 </div>
 
-                <div class="method">
+                <div class="card method">
                     <h3><code>get_region(region, fields=[])</code></h3>
                     <p>Returns data on the region in JSON format.</p>
                 </div>
 
-                <div class="method">
+                <div class="card method">
                     <h3><code>get_all(type)</code></h3>
                     <p>Returns an Array containing names of all the specified resource type.</p>
                 </div>
@@ -123,9 +124,9 @@ Pokemon.get_pokemon('zorua').then(console.log);</code></pre>
         <h2 id="links">Links</h2>
 
         <ul class="links">
-            <li><a href="https://www.npmjs.com/package/pokemon.js">NPM</a></li>
-            <li><a href="https://github.com/musubi3/pokemon.js.git">GitHub</a></li>
-            <li><a href="https://pokeapi.co/">PokéAPI</a></li>
+            <li><a href="https://www.npmjs.com/package/pokemon.js" class="tag">NPM</a></li>
+            <li><a href="https://github.com/musubi3/pokemon.js.git" class="tag">GitHub</a></li>
+            <li><a href="https://pokeapi.co/" class="tag">PokéAPI</a></li>
         </ul>
     </div>
 </body>
