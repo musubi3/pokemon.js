@@ -134,7 +134,7 @@ body {
 
 .method {
   padding: 1.5em 1em 0.5em 1em;
-  border-radius: 6px;
+  border-radius: 8px;
   border-left: 3px solid var(--color-accent);
   border-right: 1px solid var(--card-border);
   border-top: 1px solid var(--card-border);
